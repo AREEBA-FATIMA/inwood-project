@@ -27,7 +27,7 @@ function Testimonial() {
             </div>
             <div className="flex flex-col justify-evenly mt-10 md:mt-20">
               <p className="text-lg md:text-2xl pl-2 md:pl-4 text-gray-600">
-                &quot;My experience with Mark has been a success,<br /> from customer service to quality products, clean store,<br /> and purchase process. I even signed up for their newsletter.<br /> Thank you!&quot;
+                &quot;My experience with Mark has been a success,&lt;br /&gt; from customer service to quality products, clean store,&lt;br /&gt; and purchase process. I even signed up for their newsletter.&lt;br /&gt; Thank you!&quot;
               </p>
               <div className="ml-2 md:ml-4">
                 <p className="text-base md:text-lg font-bold">Leona Paul</p>
@@ -50,7 +50,7 @@ function Testimonial() {
             </div>
             <div className="flex flex-col justify-evenly mt-10 md:mt-20">
               <p className="text-lg md:text-2xl pl-2 md:pl-4 text-gray-600">
-                &quot;Mark's service has always exceeded my expectations.<br /> The seamless shopping experience and helpful staff<br /> ensure that I always return. Highly recommended!&quot;
+                &quot;Mark&apos;s service has always exceeded my expectations.&lt;br /&gt; The seamless shopping experience and helpful staff&lt;br /&gt; ensure that I always return. Highly recommended!&quot;
               </p>
               <div className="ml-2 md:ml-4">
                 <p className="text-base md:text-lg font-bold">Berk Atan</p>
