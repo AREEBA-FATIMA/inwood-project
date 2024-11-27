@@ -1,3 +1,6 @@
+import React from 'react';
+import Image from 'next/image'; // Import Image component from next/image
+
 function PopularProducts() {
   // Define the products array inside the component
   const products = [
@@ -18,11 +21,16 @@ function PopularProducts() {
         <div className='flex overflow-x-auto space-x-8'>
           {products.map((product) => (
             <div key={product.id} className={`card rounded-lg shadow-md p-6 ${product.bgColor} min-w-[300px] h-96`}>
-              <img
-                src={product.img}
-                alt={product.name}
-                className='w-full h-40 object-contain rounded-lg mb-4'
-              />
+              {/* Use next/image instead of img */}
+              <div className='w-full h-40 relative mb-4'>
+                <Image
+                  src={product.img}
+                  alt={product.name}
+                  layout="fill" // Fills the container while maintaining aspect ratio
+                  objectFit="contain" // Ensures the image is contained without stretching
+                  className='rounded-lg'
+                />
+              </div>
               <h2 className='text-xl text-[#9eada6] font-medium mb-2'>{product.name}</h2>
               <p className='text-sm text-[#9eada6] mb-4'>{product.description}</p>
               <p className='text-[#9eada6] font-bold'>${product.price}</p>

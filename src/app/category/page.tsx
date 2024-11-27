@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image"; // Import Image component from next/image
 
 const categories = [
   { name: "Bedroom", image: "/images/c-1.png" },
@@ -64,10 +65,11 @@ const CategoryPage = () => {
                 className="relative overflow-hidden rounded-lg h-[150px] sm:h-[220px] md:h-[200px] lg:h-[200px] shadow-md transition-transform duration-300 hover:scale-105"
               >
                 {category.image ? (
-                  <img
+                  <Image
                     src={category.image}
                     alt={category.name}
-                    className="w-full h-full object-cover"
+                    layout="fill" // Fills the container while maintaining aspect ratio
+                    objectFit="cover" // Ensures the image covers the container without stretching
                   />
                 ) : (
                   <div className="w-full h-full bg-gray-200 flex items-center justify-center">

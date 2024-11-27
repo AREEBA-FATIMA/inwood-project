@@ -5,10 +5,12 @@ export default function Newsletter() {
     <div className="flex flex-col md:flex-row items-start justify-center h-screen">
       {/* Image Section */}
       <div className="mt-0 md:mt-8"> {/* Remove margin top on small screens */}
-        <img
+        <Image
           src="/images/n-1.png"
           alt="Eames Chair"
-          className="w-full md:w-[1400px] h-auto md:h-[450px] object-cover" // Make image responsive
+          width={1400} // Set width for responsive behavior
+          height={450} // Set height for responsive behavior
+          className="w-full h-auto object-cover" // Keep the object-cover class for responsiveness
         />
       </div>
 

@@ -1,5 +1,6 @@
 // components/OurOwnCreation.js
 import React from 'react';
+import Image from 'next/image'; // Import Image from next/image
 
 const OurOwnCreation = () => {
     return (
@@ -23,7 +24,15 @@ const OurOwnCreation = () => {
                     {/** Each Room Image Card with Overlay **/}
                     {['/images/cr-1.png', '/images/cr-2.png', '/images/cr-3.png', '/images/cr-4.png'].map((image, index) => (
                         <div className="relative min-w-[250px] bg-white rounded-lg shadow-md overflow-hidden group" key={index}>
-                            <img src={image} alt={`Room ${index + 1}`} className="w-full h-80 object-cover" /> {/* Increased height */}
+                            <div className="relative w-full h-80">
+                                <Image 
+                                    src={image} 
+                                    alt={`Room ${index + 1}`} 
+                                    layout="fill" 
+                                    objectFit="cover" 
+                                    className="w-full h-full object-cover"
+                                />
+                            </div>
                             <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                                 <button className="bg-blue-100 text-black px-4 py-2 mt-32 rounded-lg item-end">Explore All Rooms</button> {/* Button style */}
                             </div>
