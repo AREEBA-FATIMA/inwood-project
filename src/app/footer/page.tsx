@@ -4,9 +4,9 @@ import Link from 'next/link';
 const Footer = () => {
   return (
     <footer className="footer bg-white text-teal-800 pb-10">
-      <div className="container mx-auto">
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-8 px-4 md:px-0"> {/* Add horizontal padding for small screens */}
-          
+      <div className="container mx-auto px-4 md:px-8"> {/* Add padding to the container */}
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-8 px-4 md:px-0"> {/* Padding inside grid for small screens */}
+
           {/* Logo and Contact Info */}
           <div>
             {/* Chair icon as the logo */}
@@ -16,7 +16,7 @@ const Footer = () => {
             </div>
             
             {/* Social Icons */}
-            <ul className="social-icons flex space-x-8 mb-4">
+            <ul className="social-icons flex lg:space-x-8 space-x-4 mb-4">
               <li><a href="#"><i className="fab fa-facebook leading-tight text-2xl"></i></a></li>
               <li><a href="#"><i className="fab fa-instagram leading-tight text-2xl"></i></a></li>
               <li><a href="#"><i className="fab fa-linkedin leading-tight text-2xl"></i></a></li>

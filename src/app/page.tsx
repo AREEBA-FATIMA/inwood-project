@@ -30,7 +30,8 @@ const HomePage = () => {
   }, []);
 
   return (
-    <div
+    <div>
+      <div
       className="relative flex flex-col min-h-screen bg-fixed bg-cover bg-center bg-no-repeat"
       style={{
         backgroundImage: 'url("/images/main.png")',
@@ -104,7 +105,7 @@ const HomePage = () => {
           Shop Now
         </button>
       </div>
-
+</div>
       {/* Sections */}
       <div id="category">
         <CategoryPage />
